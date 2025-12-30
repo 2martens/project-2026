@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+
+@tailwind utilities;
+
+@theme {
+  --font-main: ui-sans-serif, system-ui, sans-serif, "PT Sans";
+  --color-light-green: rgb(108, 205, 135);
+  --color-dark-green: rgb(26, 132, 68);
+  --color-grashalm: rgb(138, 189, 36);
+  --color-highlight: rgb(255, 241, 122);
+  --color-klee: rgb(0, 137, 57);
+  --color-sand: rgb(245, 241, 233);
+  --color-yellow: rgb(255, 255, 0);
+  --spacing: 0.25rem;
+
+  --color-primary: var(--color-highlight);
+  --color-body: var(--color-white);
+  --color-subtle: var(--color-sand);
+  --color-supporting: var(--color-white);
+
+  --color-background: var(--color-dark-green);
+  --color-background-secondary: var(--color-white)
+}
+
+@layer base {
+  html {
+    @apply font-main;
+  }
+  body {
+    @apply bg-background;
+    @apply text-body;
+    @apply text-pretty;
+  }
+
+  .optimal-reading-width {
+    max-width: 28em;
+  }
+}
