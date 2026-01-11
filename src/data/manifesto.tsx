@@ -1,40 +1,35 @@
-import { byPrefixAndName } from "@awesome.me/kit-217da5ee1c/icons";
-import type { IconProp } from "@fortawesome/fontawesome-svg-core";
+import {byPrefixAndName, type IconDefinition} from "@awesome.me/kit-c3a2403785/icons";
 
-export const claim = "Pragmatisch, praktisch, links";
-export const heading = "Meine Themen";
+export const claim = "Pragmatisch, praktisch, grün";
+export const heading = "Palantir verhindern";
 export const intro =
-  "Ich stehe für eine Politik, die nach der Harvard Verhandlungsmethode arbeitet: Bedürfnisse sammeln und dann zielgerichtete Lösungen finden. Stets darauf ausgerichtet das Leben in unserer Gesellschaft für alle Menschen angenehmer und besser zu machen.";
+  "\"Als Ministerpräsident werde ich alles dafür tun, Palantir durch eine 🇪🇺-Alternative zu ersetzen. BW hat die Unternehmen & die Köpfe dafür. Digitale Souveränität ist Sicherheit. Wer Europas Werte verteidigen will, muss US-Tech-Oligarchen begrenzen.\" (Cem Özdemir)";
 
 export interface Position {
   name: string;
   description: string;
-  icon: IconProp;
+  icon: IconDefinition;
+  link?: string;
 }
 
 export const positions: Position[] = [
   {
-    name: "Menschenrechtsorientierte Politik",
+    name: "Unabhängig von US-Tech-Oligarchen",
     description:
-      "'Die Würde des Menschen ist unantastbar.' So beginnt das Grundgesetz und das ist handlungsleitend für mich. Migration an und für sich ist kein Problem. Vor Ort gibt es Herausforderungen, die wir konkret angehen müssen. ",
-    icon: byPrefixAndName.fal["life-ring"],
+      "Der Leiter von Palantir, Alex Karp, vertritt rechtsextreme Positionen. Wir wollen uns nicht von so jemandem abhängig machen.",
+    icon: byPrefixAndName.far["flag-usa"],
   },
   {
-    name: "ÖPNV bedarfsgerecht ausbauen",
+    name: "Gegen Rasterfahndung",
     description:
-      "Im Zentrum haben wir bereits eine gute Anbindung, die aber mehr Kapazität benötigt. Die U5 steht maßgeblich dafür. Gerade in den ländlicheren Gegenden der Stadt brauchen wir aber auch mehr Angebot, damit der öffentliche Personenverkehr attraktiv ist.",
-    icon: byPrefixAndName.far["train"],
+      "\"Die Palantir-Rasterfahndung erfasst eine enorme Menge von Menschen. Zuvor getrennte Daten werden miteinander verknüpft, die für sehr unterschiedliche Zwecke vorgesehen waren. Schon allein deshalb darf die automatisierte Massenanalyse nicht zum Polizeialltag werden.\" (Constanze Kurz, Sprecherin des CCC)",
+    icon: byPrefixAndName.far["binoculars"],
   },
   {
-    name: "Fahrplanauskunft verbessern",
+    name: "Palantir juristisch bekämpfen",
     description:
-      "Laut App kommt die S-Bahn pünktlich, in Wirklichkeit aber zu spät? Solche Inkonsistenzen will ich bekämpfen durch eine bessere Datenqualität der Prognosedaten von den Verkehrsbetrieben.",
-    icon: byPrefixAndName.far["mobile-signal-out"],
-  },
-  {
-    name: "Tarifreform umsetzen",
-    description:
-      "Der Zeitkartentarif ist bereits deutlich übersichtlicher: nur noch Deutschlandticket. Nun muss beim Gelegenheits- bzw. Bartarif auch noch entrümpelt werden. Konkret möchte ich die Zahlgrenzen loswerden.",
-    icon: byPrefixAndName.far["ticket"],
+      "Die Gesellschaft für Freiheitsrechte hat in Bayern Verfassungsbeschwerde gegen das Data Mining eingereicht.",
+    icon: byPrefixAndName.far["gavel"],
+    link: "https://freiheitsrechte.org/themen/freiheit-im-digitalen/palantir-bayern"
   },
 ];

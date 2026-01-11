@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import portrait from "../assets/landingpage-portrait.jpg";
+import { Image } from "astro:assets";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { byPrefixAndName } from "@awesome.me/kit-c3a2403785/icons";
+import PalantirLandingPage from "@components/PalantirLandingpage";
+
+const portraitAltText = "Porträt eines Mannes mittleren Alters mit kurzen dunklen Haaren und Brille, der in die Kamera lächelt. Er trägt ein hellblaues Hemd und ein graues Sakko; der Hintergrund ist in warmen Rot- und Orangetönen gehalten."
+---
+
+<Layout
+  title="bawü.eu"
+  description="bawü.eu - Website of the Länd"
+  appName="bawü.eu"
+  logoTitle="The Länd"
+  activeItem="Home"
+>
+  <PalantirLandingPage showCTA={true}>
+	<figure 
+	slot="portrait"
+	class="w-full rounded-b-xl shadow-xl lg:-ml-0 lg:w-[40rem]">
+		<Image
+		src={portrait}
+		alt={portraitAltText}
+		class="rounded-t-xl"
+	  />
+	  <figcaption class="text-base/7 pl-1">
+		<FontAwesomeIcon 
+		icon={byPrefixAndName.far["copyright"]}
+		aria-hidden="true"
+        className="size-4 inline-block align-middle"
+		/>&nbsp;<span class="inline-block align-middle text-body dark:text-body-dark">Raimond Spekking / CC-BY-SA 4.0 </span></figcaption>
+	</figure>
+  </PalantirLandingPage>
+</Layout>

@@ -1,7 +1,13 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { claim, heading, intro, positions } from "../data/manifesto";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {claim, heading, intro, positions} from "../data/manifesto";
+import type {ReactNode} from "react";
 
-export default function PalantirLandingPage(props: any, showCTA: boolean) {
+interface LandingPageProperties {
+  portrait: ReactNode;
+  showCTA: boolean;
+}
+
+export default function PalantirLandingPage({portrait, showCTA}: LandingPageProperties) {
   return (
     <main>
       <div
@@ -29,12 +35,13 @@ export default function PalantirLandingPage(props: any, showCTA: boolean) {
                         {position.name}
                       </dt>{" "}
                       <dd className="inline">{position.description}</dd>
+                      {position.link && (<dd><a className="" href={position.link}>Mehr hier <span aria-hidden="true">→</span></a></dd> )}
                     </div>
                   ))}
                 </dl>
               </div>
             </div>
-            {props.portrait}
+            {portrait}
           </div>
         </div>
       </div>
@@ -44,13 +51,13 @@ export default function PalantirLandingPage(props: any, showCTA: boolean) {
             <h2 className="text-4xl font-semibold tracking-tight text-body dark:text-body-dark sm:text-5xl">
               <span className="text-body dark:text-body-dark">Überzeugt?</span>
             </h2>
-          <h3 className="mt-1 text-3xl font-semibold tracking-tight text-body dark:text-body-dark sm:text-4xl">Platz 56 der Landesliste der GRÜNEN am 2. März!</h3>
+          <h3 className="mt-1 text-3xl font-semibold tracking-tight text-body dark:text-body-dark sm:text-4xl">Werde aktiv gegen Palantir!</h3>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
-              href="https://www.gruene-hamburg.de/gute-gruende-fuer-gruen/"
+              href="https://freiheitsrechte.org/mitmachen/einzelspenden"
               className="text-sm/6 font-semibold text-body dark:text-body-dark"
             >
-              Lese das Wahlprogramm <span aria-hidden="true">→</span>
+              Spende für die Gesellschaft für Freiheitsrechte <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
