@@ -70,7 +70,7 @@ jobs:
               SOURCE: "dist/"
               REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
               REMOTE_USER: ${{ secrets.REMOTE_USER }}
-              TARGET: /var/www/virtual/${{ secrets.REMOTE_USER }}/bawue-new/
+              TARGET: /var/www/virtual/${{ secrets.REMOTE_USER }}/xn--baw-joa.eu-new/
               EXCLUDE: "/dist/, /node_modules/"
   deploy:
     needs: build
