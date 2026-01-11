@@ -1,4 +1,4 @@
-import { byPrefixAndName } from '@awesome.me/kit-217da5ee1c/icons'
+import { byPrefixAndName } from '@awesome.me/kit-c3a2403785/icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { getCollection } from 'astro:content';

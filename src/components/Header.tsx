@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { byPrefixAndName } from "@awesome.me/kit-217da5ee1c/icons";
+import { byPrefixAndName } from "@awesome.me/kit-c3a2403785/icons";
 import type { CollectionEntry } from "astro:content";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
